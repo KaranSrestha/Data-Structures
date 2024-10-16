@@ -1,22 +1,22 @@
 public class BinarySearch {
-    //for ascending order
-    public static int bSearch(int[] arr, int num){
-        int left = 0;
-        int right = arr.length-1;
-        while(left <= right){
-            int mid = left + (right-left)/2; //left+right may go out of range of integers
-            if(arr[mid] == num){
-                return mid;
-            }else if(arr[mid] < num){
-                //shift the left pointer
-                left = mid + 1;
-            }else{
-                //shift the right pointer
-                right = mid - 1;
-            }
-        }
-        return -1; //not found
-    }
+    // //for ascending order
+    // public static int bSearch(int[] arr, int num){
+    //     int left = 0;
+    //     int right = arr.length-1;
+    //     while(left <= right){
+    //         int mid = left + (right-left)/2; //left+right may go out of range of integers
+    //         if(arr[mid] == num){
+    //             return mid;
+    //         }else if(arr[mid] < num){
+    //             //shift the left pointer
+    //             left = mid + 1;
+    //         }else{
+    //             //shift the right pointer
+    //             right = mid - 1;
+    //         }
+    //     }
+    //     return -1; //not found
+    // }
     public static int orderAgnosticBS(int[] arr, int num){
         int left = 0;
         int right = arr.length - 1;
